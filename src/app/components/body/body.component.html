@@ -1,0 +1,38 @@
+
+
+<div class="row">
+
+    <div class="col">
+        <h1></h1>
+        <hr>
+        <div *ngIf="Mostrar" class="card text-white bg-danger mb-3" style="width:100%;">
+            <div class="card-header">Notas de Agus</div>
+            <div class="card-body">
+              <h5 class="card-title">23/02/2018</h5>
+              <p class="card-text">la fecha más importante en la vida de Clave</p>
+            </div>
+          </div>
+
+          <button (click)=" Mostrar= !Mostrar " class="btn btn-outline-primary btn-block">
+                Mostrar/Ocultar
+          </button>
+    </div>
+
+    <div class="col">
+        <h1></h1>
+        <hr>
+        <ul *ngIf="Mostra" class="list-group">
+            <li *ngFor="let fav of lugaresFav; let i=index" class="list-group-item">
+              {{i+1}} - {{fav}}
+            </li>
+          </ul>
+
+          <button (click)=" Mostra= !Mostra " class="btn btn-outline-primary btn-block">
+            Mostrar/Ocultar
+      </button>
+
+
+    </div>
+    
+
+</div>
